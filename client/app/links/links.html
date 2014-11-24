@@ -1,3 +1,7 @@
 <div id='container'>
   <!-- Your html here -->
+  <input type="text" ng-model="search">
+  <ul>
+    <li ng-repeat="link in data.links | orderBy:'-visits' | filter:search"><a ng-href="/api/links/{{ link.code }}">{{link.title}}: {{ link.base_url + '/api/links/' + link.code }} Times Visited: {{link.visits}}</a></li>
+  </ul>
 </div>
