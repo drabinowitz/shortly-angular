@@ -48,6 +48,10 @@ h1 {
   background-color: #ccc;
 }
 
+.view-wrapper {
+  position: absolute;
+}
+
 #container {
   clear: both;
   margin-top: 10px;

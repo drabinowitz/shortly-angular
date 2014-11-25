@@ -1,11 +1,9 @@
 <div id='container'>
   <!-- Your html here -->
   <input type="text" ng-model="search">
-  <ul>
-    <li class="link" ng-repeat="link in data.links | orderBy:'-visits' | filter:search">
-      <img src="./assets/redirect_icon.png" alt="">
-      <a class="title" ng-href="/api/links/{{ link.code }}">{{link.title}}: {{ link.base_url + '/api/links/' + link.code }}</a>
-      <p class="visits">Times Visited: <span class="count">{{link.visits}}</span></p>
-    </li>
-  </ul>
+  <div class="link fx-rotate-counterclock" ng-repeat="link in data.links | orderBy:'-visits' | filter:search">
+    <img src="./assets/redirect_icon.png" alt="">
+    <a class="title" ng-href="/api/links/{{ link.code }}">{{link.title}}: {{ link.base_url + '/api/links/' + link.code }}</a>
+    <p class="visits">Times Visited: <span class="count">{{link.visits}}</span></p>
+  </div>
 </div>
