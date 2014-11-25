@@ -8,4 +8,14 @@ angular.module('shortly.links', [])
     .then(function(links){
       $scope.data.links = links;
     });
+})
+
+.directive('shortenedLink', function(){
+  return {
+    restrict: 'E',
+    scope: {
+      link:'=link'
+    },
+    templateUrl: 'app/links/shortened-link.html'
+  };
 });

@@ -1,0 +1,5 @@
+<div class="link">
+  <img src="./assets/redirect_icon.png" alt="">
+  <a class="title" ng-href="/api/links/{{ link.code }}">{{link.title}}: {{ link.base_url + '/api/links/' + link.code }}</a>
+  <p class="visits">Times Visited: <span class="count">{{link.visits}}</span></p>
+</div>
