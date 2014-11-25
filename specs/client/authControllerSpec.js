@@ -45,7 +45,7 @@ describe('AuthController', function () {
 
     // make a 'fake' reques to the server, not really going to our server
     $httpBackend.expectPOST('/api/users/signup').respond({token: token});
-    $scope.signup();
+    $scope.signup(true);
     $httpBackend.flush();
     expect($window.localStorage.getItem('com.shortly')).to.be(token);
   });
