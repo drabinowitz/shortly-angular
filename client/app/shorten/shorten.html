@@ -1,11 +1,11 @@
 <div id='container'>
 <!-- Your code here -->
   <form name="linkForm" ng-submit="addLink(linkForm.$valid)" novalidate>
-    <input type="text" ng-model="linkUrl" required ng-pattern="urlPattern">
+    <input type="url" ng-model="linkUrl" required ng-pattern="urlPattern">
     <button type="submit">Shorten It!</button>
   </form>
   <p ng-if="results">Successfully Posted!</p>
-  <p ng-if="error">{{ error }}</p>
+  <p class="error" ng-if="error">{{ error }}</p>
 </div>
 
 
