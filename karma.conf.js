@@ -17,7 +17,8 @@ module.exports = function(config) {
     files: [
       // angular source
       'client/lib/angular/angular.js',
-      'client/lib/angular-route/angular-route.js',
+      // 'client/lib/angular-route/angular-route.js',
+      'client/lib/angular-ui-router/release/angular-ui-router.js',
       'client/lib/angular-mocks/angular-mocks.js',
       'client/lib/ngFx/dist/ngFx.js',
 
