@@ -28,6 +28,10 @@ angular.module('shortly', [
       templateUrl: 'app/links/links.html',
       controller: 'LinksController'
     })
+    .state('links.child', {
+      url: '/child',
+      templateUrl: 'app/links/child/child.html'
+    })
     .state('shorten',{
       templateUrl: 'app/shorten/shorten.html',
       url: '/shorten',

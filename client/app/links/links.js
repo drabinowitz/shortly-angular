@@ -8,6 +8,7 @@ angular.module('shortly.links', [])
     .then(function(links){
       $scope.data.links = links;
     });
+  $scope.linkTitle = 'LINKLAND';
 })
 
 .directive('shortenedLink', function(){

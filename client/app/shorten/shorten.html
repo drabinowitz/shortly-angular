@@ -1,8 +1,8 @@
 <div id='container'>
 <!-- Your code here -->
   <form name="linkForm" ng-submit="addLink(linkForm.$valid)" novalidate>
-    <input type="url" ng-model="linkUrl" required ng-pattern="urlPattern">
-    <button type="submit">Shorten It!</button>
+    <input class="shorten-input" type="url" ng-model="linkUrl" required ng-pattern="urlPattern">
+    <button class="shorten-submit" type="submit">Shorten It!</button>
   </form>
   <p ng-if="results">Successfully Posted!</p>
   <p class="error fx-rotate-clock-left" ng-if="error">{{ error }}</p>

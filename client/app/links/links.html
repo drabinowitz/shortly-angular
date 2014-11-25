@@ -1,5 +1,6 @@
 <div id='container'>
   <!-- Your html here -->
+  <div ui-view></div>
   <input type="text" ng-model="search">
   <shortened-link ng-repeat="link in data.links | orderBy:'-visits' | filter:search" link="link"></shortened-link>
 </div>
