@@ -3,8 +3,19 @@ var Link    = require('../server/links/linkModel.js'),
 describe ('shortly', function(){
   browser.get('http://localhost:3000/');
   var url = 'http://www.github.com';
-  afterEach(function(){
-    Link.findOneAndRemove({url: url},function(){});
+  beforeEach(function(){
+/*    console.log('here');
+    var doneRemoving = false;
+    var findLink = Q.nbind(Link.findOne, Link);
+
+    findLink({url: url})
+      .then(function (match) {
+        console.log(match);
+        doneRemoving = true;
+      });
+    while(!doneRemoving){
+    }
+*/
   });
   it('should load links', function(){
     var linkNav = element(by.css('.nav-link'));

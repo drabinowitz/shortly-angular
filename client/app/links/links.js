@@ -6,6 +6,7 @@ angular.module('shortly.links', [])
   $scope.getLinks = Links.get;
   $scope.getLinks()
     .then(function(links){
+      console.log(links);
       $scope.data.links = links;
     });
   $scope.linkTitle = 'LINKLAND';
@@ -17,6 +18,7 @@ angular.module('shortly.links', [])
     scope: {
       link:'=link'
     },
+    replace: true,
     templateUrl: 'app/links/shortened-link.html'
   };
 });

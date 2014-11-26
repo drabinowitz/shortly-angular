@@ -1,6 +1,7 @@
 angular.module('shortly', [
   'shortly.services',
   'shortly.links',
+  'shortly.links.child',
   'shortly.shorten',
   'shortly.auth',
   'ngFx',
@@ -29,8 +30,9 @@ angular.module('shortly', [
       controller: 'LinksController'
     })
     .state('links.child', {
-      url: '/child',
-      templateUrl: 'app/links/child/child.html'
+      url: '/child/:code',
+      templateUrl: 'app/links/child/child.html',
+      controller: 'childController'
     })
     .state('shorten',{
       templateUrl: 'app/shorten/shorten.html',

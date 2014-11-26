@@ -1,1 +1,5 @@
-<h1>{{ linkTitle }}</h1>
+<p ng-show="error">{{ error }}</p>
+<div class="link-details" ng-if="!error">
+  <h1>Details of {{ link.title }}</h1>
+  <div class="link-details-chart"></div>
+</div>
